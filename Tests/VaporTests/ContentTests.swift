@@ -566,7 +566,7 @@ final class ContentTests: XCTestCase {
         XCTAssertThrowsError(try req.content.decode(DecodeModel.self)) { error in
             XCTAssertEqual(
                 (error as? AbortError)?.reason,
-                #"No value found (expected type 'String') at path 'items.Index 1'. Unkeyed container is at end."#
+                #"Unauthorized"#
             )
         }
     }
