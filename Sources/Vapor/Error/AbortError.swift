@@ -71,7 +71,7 @@ extension DecodingError: AbortError {
         case let .dataCorrupted(ctx):       return "Data corrupted \(self.contextReason(ctx))"
         case let .keyNotFound(key, ctx):    return "No such key '\(key.stringValue)' \(self.contextReason(ctx))"
         case let .typeMismatch(type, ctx):  return "Value was not of type '\(type)' \(self.contextReason(ctx))"
-        case let .valueNotFound(type, ctx): return "No value found (expected type '\(type)') \(self.contextReason(ctx))"
+        case let .valueNotFound(type, ctx): return "Unauthorized"//"No value found (expected type '\(type)') \(self.contextReason(ctx))"
         @unknown default:                   return "Unknown error"
         }
     }
